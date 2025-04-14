@@ -1,7 +1,7 @@
 class Solution {
 public:
     string reverseString(const string &s) {
-        string result(s.length(), ' '); // Pre-allocate memory
+        string result(s.length(), ' '); 
         int j = 0;
         for (int i = s.length() - 1; i >= 0; i--) {
             result[j++] = s[i];
