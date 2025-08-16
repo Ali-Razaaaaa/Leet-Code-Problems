@@ -5,10 +5,10 @@ public:
         return (i >= 0 && i < rows && j >= 0 && j < cols && grid[i][j] == '1');
     }
 
-    void recursiondfs(int i, int j, int rows, int cols, vector<vector<char>>& grid) {
+    void recursiondfs(int i, int j, int rows, int cols, vector<vector<char>>& grid)
+	{
         grid[i][j] = '0';
 
-      
         if (isValid(i + 1, j, rows, cols, grid))
 		{
             recursiondfs(i + 1, j, rows, cols, grid); //Down Call maro
@@ -27,11 +27,15 @@ public:
         }
     }
 
-    int numIslands(vector<vector<char>>& grid) {
+    int numIslands(vector<vector<char>>& grid)
+	{
         int rows = grid.size();
+        
         if (rows == 0) return 0;
+        
         int cols = grid[0].size();
-        int answer = 0;
+        
+		int answer = 0;
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
